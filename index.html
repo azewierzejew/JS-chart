@@ -4,13 +4,14 @@
 <head>
 	<title>Ilość czasu w czasie.</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<script src="../charts/amcharts/amcharts.js" type "text/javasrcipt"></script>
-	<script src="../charts/amcharts/serial.js" type "text/javasrcipt"></script>
-	<script src="../GeneratedChartData.js" type "text/javascript"></script>
+	<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+	<script src="https://www.amcharts.com/lib/3/serial.js"></script>
+	<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+	<script src="GeneratedChartData.js" type "text/javascript"></script>
 	<script>
 		var check1;
 		var check2;
-		if (check1 != 1 || check2 != 1) document.getElementById("loadInfo").innerHTML = "Problem Loading. Please wait and refresh page.";
+		if (check1 != 1 || check2 != 1) document.getElementById("loadInfo").innerHTML = "Problem Loading. Please refresh.";
 		var chart;
 		var loadAbs = 1;
 		var displayData = [];
@@ -75,7 +76,7 @@
 				graph.title = titles[i];
 				graph.valueField = "val" + titles[i];
 				graph.bullet = bulletTypes[i % bulletTypes.length];
-				graph.hideBulletsCount = 50;
+				graph.hideBulletsCount = 200;
 				graph.bulletBorderThickness = 1;
 				chart.addGraph(graph);
 			}
